@@ -48,6 +48,8 @@ class demo {
         do{
             System.out.println(j);
         }while(j<10);
+
+        System.out.println("hello");
         
         // calculator calc= new calculator();
         // int result = calc.add(num1,num2);
