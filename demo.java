@@ -1,11 +1,11 @@
-// class calculator
-// {   
-//     public int add(int a, int b)
-//     {
-//         int r= a+b;
-//         return r;
-//     }
-// }
+class calculator
+{   
+    public int add(int a, int b)
+    {
+        int r= a+b;
+        return r;
+    }
+}
 
 
 class demo {
@@ -51,8 +51,8 @@ class demo {
 
         System.out.println("hello");
         
-        // calculator calc= new calculator();
-        // int result = calc.add(num1,num2);
-        // System.out.println(result);
+        calculator calc= new calculator();
+        int result = calc.add(num1,num2);
+        System.out.println(result);
     }
 }
