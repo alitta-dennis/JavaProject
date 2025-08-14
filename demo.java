@@ -1,5 +1,34 @@
-class calculator
+class Calculator
 {   
+    int a, b;
+    static int x;
+    final int z=2;
+    
+    static
+    {
+        System.out.println("in static block");
+    }
+    
+    Calculator()
+    {   
+        a=5;
+        b=10;
+        System.out.println("in constructor");
+    }
+
+    Calculator(int a, int b)
+    {
+        this.a= a;
+        this.b=b;
+        System.out.println(a+" ,"+b);
+    }
+
+    static void display()
+    {
+        x=10;
+        System.out.println("static method:"+x);
+    }
+    
     public int add(int a, int b)
     {
         int r= a+b;
@@ -49,10 +78,15 @@ class demo {
             System.out.println(j);
         }while(j<10);
 
-        System.out.println("hello");
+
         
-        calculator calc= new calculator();
+        Calculator calc= new Calculator();
         int result = calc.add(num1,num2);
         System.out.println(result);
+
+        Calculator obj=new Calculator(20,40);
+
+        Calculator.display();
+        
     }
 }
