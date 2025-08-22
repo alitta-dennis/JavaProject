@@ -94,14 +94,27 @@ class demo {
         
         int m=0;
 
+        class MyException extends Exception
+        {
+            MyException(String str)
+            {
+                super(str);
+            }
+        }
+
         try 
         {
-            str.length();
-            m=18/2;
+            //str.length();
+            m=18/20;
             if(m==0)
             {
-                throw new ArithmeticException("Do not print zero");
+                throw new MyException("Do not print zero");
             }
+        }
+
+        catch(ArithmeticException e)
+        {
+            System.out.println(e);
         }
 
         catch (NullPointerException e)
