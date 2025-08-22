@@ -87,6 +87,31 @@ class demo {
         Calculator obj=new Calculator(20,40);
 
         Calculator.display();
+
+        //exception handling
+
+        String str=null; 
+        
+        int m=0;
+
+        try 
+        {
+            str.length();
+            m=18/2;
+            if(m==0)
+            {
+                throw new ArithmeticException("Do not print zero");
+            }
+        }
+
+        catch (NullPointerException e)
+        {
+            System.out.println(e);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
         
     }
 }
