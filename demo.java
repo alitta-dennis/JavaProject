@@ -1,3 +1,8 @@
+import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
 class Calculator
 {   
     int a, b;
@@ -130,6 +135,61 @@ class demo {
         {
             System.out.println("The End!!");
         }
+
+        //Collections
+        //List- ArrayList
+
+        List<Integer> nums = new ArrayList<Integer>();
+        nums.add(2);
+        nums.add(4);
+        nums.add(6);
+        nums.add(8);
         
+        System.out.println(nums);
+
+        for(Object n:nums)
+        {
+            System.out.println(n);
+        }
+
+        //Set
+
+        Set<Integer> vals = new HashSet<Integer>();
+        vals.add(22);
+        vals.add(43);
+        vals.add(67);
+        vals.add(84);
+        
+        Iterator<Integer> values= vals.iterator();
+        
+        while(values.hasNext())
+        {
+            System.out.println(values.next());
+        }
+
+        //Map
+
+        Map<String,Integer> students= new HashMap<String, Integer>();
+        students.put("Sam", 45);
+        students.put("Tessa", 65);
+        students.put("Meenakshi", 84);
+        students.put("Amal", 76);
+        students.put("Syed", 67);
+
+        System.out.println(students);
+
+        System.out.println(students.keySet());
+
+        for(String key: students.keySet())
+        {
+            System.out.println(key+ ":"+ students.get(key));
+        }
+
+
     }
 }
+
+
+
+
+
