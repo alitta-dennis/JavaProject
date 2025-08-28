@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashSet;
-import java.util.Collection;
+//import java.util.Collection;
 
 class Calculator
 {   
@@ -204,6 +204,34 @@ class demo {
             Collections.sort(nums,com);
             System.out.println(nums);
         
+        //Strings
+
+        str= "Welcome";
+        str.concat("here");
+        System.out.println(str);
+        str=str.concat("hello");
+        System.out.println(str);
+        
+
+
+        //String comparisons
+        String str1= "hello";
+        String str2="hello";
+        System.out.println(str1.equals(str2));
+
+        String str3= new String("hello");
+        System.out.println(str1 ==str2);
+        System.out.println(str1==str3);
+
+
+        //String Buffer
+        StringBuffer sb= new StringBuffer("Hello ");
+        sb.append("World");
+
+        
+        System.out.println(sb);
+
+
 
     }
 }
