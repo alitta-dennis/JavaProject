@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.Collection;
+
 class Calculator
 {   
     int a, b;
@@ -140,10 +142,10 @@ class demo {
         //List- ArrayList
 
         List<Integer> nums = new ArrayList<Integer>();
-        nums.add(2);
-        nums.add(4);
-        nums.add(6);
-        nums.add(8);
+        nums.add(29);
+        nums.add(47);
+        nums.add(64);
+        nums.add(85);
         
         System.out.println(nums);
 
@@ -185,6 +187,23 @@ class demo {
             System.out.println(key+ ":"+ students.get(key));
         }
 
+
+        //comparator
+
+        Comparator<Integer> com= new Comparator<Integer>() {
+            
+            public int compare(Integer i, Integer j)
+            {
+                if(i%10 > j%10)
+                    return 1;
+                else 
+                    return -1;
+            }
+        };
+
+            Collections.sort(nums,com);
+            System.out.println(nums);
+        
 
     }
 }
