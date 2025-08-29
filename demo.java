@@ -43,6 +43,54 @@ class Calculator
     }
 }
 
+class A extends Thread
+{
+    public void run()
+    {   
+        for(int i =1;i<=10;i++)
+        {
+            System.out.println("Hi");
+        }
+        
+    }
+}
+
+class B extends Thread
+{
+    public void run()
+    {   
+        for(int i =1;i<=100;i++)
+        {
+            System.out.println("Hello");
+        }
+        
+    }
+}
+
+class X implements Runnable
+{
+    public void run()
+    {   
+        for(int i =1;i<=100;i++)
+        {
+            System.out.println("Hi");
+        }
+        
+    }
+}
+
+class Y implements Runnable
+{
+    public void run()
+    {   
+        for(int i =1;i<=10;i++)
+        {
+            System.out.println("Hello");
+        }
+        
+    }
+}
+
 
 class demo {
     public static void main(String []args) {
@@ -231,6 +279,25 @@ class demo {
         
         System.out.println(sb);
 
+
+        //Multithreading
+
+        A obj1= new A();
+        B obj2= new B();
+
+        obj1.start();
+        obj2.start();
+
+        //Runnable class
+
+        Runnable obj3= new X();
+        Runnable obj4 = new Y();
+
+        Thread t1= new Thread(obj3);
+        Thread t2=new Thread(obj4);
+
+        t1.start();
+        t2.start();
 
 
     }
