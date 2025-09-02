@@ -91,6 +91,10 @@ class Y implements Runnable
     }
 }
 
+interface C{
+
+    int show(int i, int j);
+}
 
 class demo {
     public static void main(String []args) {
@@ -298,6 +302,29 @@ class demo {
 
         t1.start();
         t2.start();
+
+        //Functional Interface
+
+        /*C inter = new C(){
+
+            public void show()
+            {
+                System.out.println("in show");
+            }
+        };
+
+        inter.show();*/
+
+        //Lambda expressions
+        /*C inter = ()->System.out.println("in show");
+
+        inter.show();*/
+
+        //Lambda expression with return
+        C inter = (i,k) -> i+k;
+
+        int res=inter.show(5,7);
+        System.out.println(res);
 
 
     }
