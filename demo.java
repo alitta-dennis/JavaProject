@@ -1,9 +1,6 @@
-import java.util.*;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.HashSet;
 //import java.util.Collection;
+import java.util.*;
+import java.util.stream.Stream;
 
 class Calculator
 {   
@@ -286,7 +283,7 @@ class demo {
 
         //Multithreading
 
-        A obj1= new A();
+        /*  A obj1= new A();
         B obj2= new B();
 
         obj1.start();
@@ -301,7 +298,7 @@ class demo {
         Thread t2=new Thread(obj4);
 
         t1.start();
-        t2.start();
+        t2.start();*/
 
         //Functional Interface
 
@@ -325,6 +322,18 @@ class demo {
 
         int res=inter.show(5,7);
         System.out.println(res);
+
+        //Stream API
+
+        List<Integer> arr = Arrays.asList(3,5,2,6,8,0,1);
+
+        Stream<Integer> s1=arr.stream();
+        Stream<Integer> s2= s1.filter(n->n%2==0);
+        //s2.forEach(n->System.out.println(n));
+        Stream<Integer> s3= s2.map(n->n*2);
+        s3.forEach(n->System.out.println(n));
+        
+
 
 
     }
